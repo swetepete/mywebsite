@@ -1,11 +1,34 @@
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
 <p id="text locus"> </p>
+
+<button id="me button"> Click </button>
 
 <script>
 
 
 const el = document.getElementById("text locus")
 
-el.innerText = "replaced"
+document.getElementById("me button").addEventListener("click", cycle())
+
+var index = 0
+
+const sents = ["1", "2", "3"]
+
+function cycle() {
+
+index = (index + 1) % 3
+
+el.innerText = sents[index]
+
+}
 
 </script>
 
+</body>
